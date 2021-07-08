@@ -255,3 +255,5 @@ const addEmployee = () => {
       }
     });
 };
+
+addManager();
