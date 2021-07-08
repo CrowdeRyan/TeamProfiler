@@ -8,7 +8,7 @@ const generateHtml = require("./utils/generateHtml");
 const employees = [];
 
 const questions = {
-  // MANAGER QUESTIONS
+  // Manager Prompts
   manager: [
     {
       type: "input",
@@ -61,7 +61,7 @@ const questions = {
     },
   ],
 
-  // ENGINEER QUESTIONS
+  // Engineer Prompts
   engineer: [
     {
       type: "input",
@@ -115,7 +115,7 @@ const questions = {
       },
     },
   ],
-  // INTERN QUESTIONS
+  // Intern Prompts
 
   intern: [
     {
@@ -170,4 +170,18 @@ const questions = {
       },
     },
   ],
+};
+
+// Manager questions function
+const addManager = () => {
+  return inquirer.prompt(questions.manager).then((answers) => {
+    const manager = new Manager(
+      answers.name,
+      answers.id,
+      answers.email,
+      answers.officeNumber
+    );
+    employees.push(manager);
+    addEmployee();
+  });
 };
