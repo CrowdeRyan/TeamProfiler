@@ -9,6 +9,7 @@ const employees = [];
 
 const questions = {
   // Manager Prompts
+
   manager: [
     {
       type: "input",
@@ -62,6 +63,7 @@ const questions = {
   ],
 
   // Engineer Prompts
+
   engineer: [
     {
       type: "input",
@@ -182,6 +184,20 @@ const addManager = () => {
       answers.officeNumber
     );
     employees.push(manager);
+    addEmployee();
+  });
+};
+
+// Engineer questions function
+const addEngineer = () => {
+  return inquirer.prompt(questions.engineer).then((answers) => {
+    const engineer = new Engineer(
+      answers.name,
+      answers.id,
+      answers.email,
+      answers.github
+    );
+    employees.push(engineer);
     addEmployee();
   });
 };
