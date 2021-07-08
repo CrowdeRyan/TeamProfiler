@@ -215,3 +215,18 @@ const addIntern = () => {
     addEmployee();
   });
 };
+
+// Profile Function
+const makeProfile = (fileName) => {
+  fileName = fs.writeFile(
+    "./dist/index.html",
+    generateHtml(employees),
+    (err) => {
+      if (err) {
+        console.log("Error: " + err);
+      } else {
+        console.log("\n Team Profile created and added: /dist/index.html!");
+      }
+    }
+  );
+};
