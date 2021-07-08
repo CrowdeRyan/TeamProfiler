@@ -8,3 +8,9 @@ test("creates an engineer object", () => {
   expect(employee.email).toStrictEqual(expect.any(String));
   expect(employee.github).toEqual(expect.any(String));
 });
+
+test("get the employee's role", () => {
+  const employee = new Engineer("Tony", 100, "Starky@gmail.com", "IamIron");
+
+  expect(employee.getRole()).toEqual("Engineer");
+});
