@@ -201,3 +201,17 @@ const addEngineer = () => {
     addEmployee();
   });
 };
+
+// Intern questions function
+const addIntern = () => {
+  return inquirer.prompt(questions.intern).then((answers) => {
+    const intern = new Intern(
+      answers.name,
+      answers.id,
+      answers.email,
+      answers.schoolName
+    );
+    employees.push(intern);
+    addEmployee();
+  });
+};
