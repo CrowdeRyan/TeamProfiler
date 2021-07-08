@@ -2,6 +2,10 @@
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
+## [Live Sample](https://crowderyan.github.io/TeamProfiler/dist/index.html)
+
+## [Walkthrough Video](https://drive.google.com/file/d/1ANUDYbHDzKJmQ6EvitgrllH3M0H3XbrN/view)
+
 ## Description: Using node prompts, this app will create and populate an HTML about your development team, includes tests of functionality
 
 ![Team page](./assets/images/profile-page.png)
