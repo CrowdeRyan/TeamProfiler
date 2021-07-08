@@ -230,3 +230,28 @@ const makeProfile = (fileName) => {
     }
   );
 };
+
+// Add to Team Function
+
+const addEmployee = () => {
+  return inquirer
+    .prompt({
+      type: "list",
+      name: "newEmployee",
+      message: "Do you want to add another Employee?",
+      choices: ["Engineer", "Intern", "Complete Team Profile"],
+    })
+    .then((answers) => {
+      switch (answers.newEmployee) {
+        case "Engineer":
+          addEngineer();
+          break;
+        case "Intern":
+          addIntern();
+          break;
+        case "Complete Team Profile":
+          makeProfile();
+          break;
+      }
+    });
+};
