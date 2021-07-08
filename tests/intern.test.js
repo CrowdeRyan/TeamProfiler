@@ -19,7 +19,7 @@ test("get the employee's role", () => {
     "Natasha",
     100,
     "Widow@gmail.com",
-    "Ricmond University"
+    "Richmond University"
   );
 
   expect(employee.getRole()).toEqual("Intern");
