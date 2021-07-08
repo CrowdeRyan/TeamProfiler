@@ -8,3 +8,9 @@ test("creates a manager object", () => {
   expect(employee.email).toStrictEqual(expect.any(String));
   expect(employee.officeNumber).toEqual(expect.any(Number));
 });
+
+test("get the employee's role", () => {
+  const employee = new Manager("Steve", 100, "Steve@gmail.com", 101);
+
+  expect(employee.getRole()).toEqual("Manager");
+});
